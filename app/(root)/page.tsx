@@ -25,13 +25,15 @@ async function Home() {
     <>
       <section className="card-cta">
         <div className="flex flex-col gap-6 max-w-lg">
-          <h2>Get Interview-Ready with AI-Powered Practice & Feedback</h2>
+          <h2>
+            Haz ya tu entrevista con feedback conciso 
+          </h2>
           <p className="text-lg">
-            Practice real interview questions & get instant feedback
+           Get ready for the future!
           </p>
 
           <Button asChild className="btn-primary max-sm:w-full">
-            <Link href="/interview">Start an Interview</Link>
+            <Link href="/interview">Comienza tu entrevista</Link>
           </Button>
         </div>
 
@@ -45,7 +47,7 @@ async function Home() {
       </section>
 
       <section className="flex flex-col gap-6 mt-8">
-        <h2>Your Interviews</h2>
+        <h2>Tus entrevistas</h2>
 
         <div className="interviews-section">
           {hasPastInterviews ? (
@@ -67,7 +69,7 @@ async function Home() {
       </section>
 
       <section className="flex flex-col gap-6 mt-8">
-        <h2>Take Interviews</h2>
+        <h2>Haz entrevistas</h2>
 
         <div className="interviews-section">
           {hasUpcomingInterviews ? (
@@ -83,7 +85,7 @@ async function Home() {
               />
             ))
           ) : (
-            <p>There are no interviews available</p>
+            <p>No hay entrevistas disponibles</p>
           )}
         </div>
       </section>
