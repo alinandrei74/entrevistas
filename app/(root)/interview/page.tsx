@@ -3,18 +3,18 @@ import { getCurrentUser } from "@/lib/actions/auth.action";
 
 const Page = async () => {
   const user = await getCurrentUser();
+  const workflowId = process.env.NEXT_PUBLIC_VAPI_WORKFLOW_ID;
 
   return (
-    <>
-      <h3>Interview generation</h3>
+    <Agent
+  userName={user?.name!}
+  userId={user?.id ?? ""}
+  type="generate"
+  workflowId={process.env.NEXT_PUBLIC_VAPI_WORKFLOW_ID!}
+/>
 
-      <Agent
-        userName={user?.name!}
-        userId={user?.id}
-        type="generate"
-      />
-    </>
   );
 };
+
 
 export default Page;
